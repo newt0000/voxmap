@@ -17,6 +17,10 @@ performance:
   maxCachedChunkMeshesPerWorld: 1024
   chunkDirtyDebounceMs: 500
 
+
+texturepack: "default-1.21.11.zip" #set the used pack file this will be fetched from the texturepacks folder
+
+#ignore sections bellow these are only for internal use
 textures:
   mode: "resourcepack"        # "resourcepack" or "fallback"
   packFile: "texturepacks/default-1.21.11.zip"

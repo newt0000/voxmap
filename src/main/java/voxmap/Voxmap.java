@@ -26,7 +26,18 @@ public final class Voxmap extends JavaPlugin {
     @Override
     public void onEnable() {
         saveDefaultConfig();
+        // Always re-load from disk (not a stale in-memory copy)
+        reloadConfig();
+        String mode = getConfig().getString("textures.mode", "resourcepack");
+        String packFile = getConfig().getString("textures.packFile", "texturepacks/default-1.21.11.zip");
+        int tileSize = getConfig().getInt("textures.tileSize", 16);
+        int maxTiles = getConfig().getInt("textures.maxTiles", 1024);
 
+        getLogger().info("Textures: mode=" + mode + " packFile=" + packFile
+                + " tileSize=" + tileSize + " maxTiles=" + maxTiles);
+        // Now read the actual value
+        String pack = getConfig().getString("textures.packFile", "default");
+        getLogger().info("Config texturepack=" + pack);
         worldsConfig = new WorldsConfig(this);
         worldsConfig.loadOrCreate();
 

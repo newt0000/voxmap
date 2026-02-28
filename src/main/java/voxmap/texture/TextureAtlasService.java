@@ -83,7 +83,7 @@ public class TextureAtlasService {
         if (!tpDir.exists()) tpDir.mkdirs();
 
         // Config key: texturepack: "default-1.21.11.zip" OR absolute path
-        String cfg = plugin.getConfig().getString("texturepack", "default-1.21.11.zip");
+        String cfg = plugin.getConfig().getString("textures.packFile", "default-1.21.11.zip");
         File chosen = resolveTexturePack(tpDir, cfg);
 
         if (chosen != null && chosen.isFile() && chosen.getName().toLowerCase(Locale.ROOT).endsWith(".zip")) {
