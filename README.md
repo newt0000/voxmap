@@ -223,6 +223,7 @@ app.js - Reduce torch light count
 ## Credits
 
 Developed by Newt_00
+
 Built using: - Paper API - Three.js - mc-heads.net API
  
 ------------------------------------------------------------------------
