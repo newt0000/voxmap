@@ -224,7 +224,7 @@ app.js - Reduce torch light count
 
 Developed by Newt_00
 Built using: - Paper API - Three.js - mc-heads.net API
-
+ 
 ------------------------------------------------------------------------
 
 Voxmap is designed to provide a true voxel-accurate 3D representation of
