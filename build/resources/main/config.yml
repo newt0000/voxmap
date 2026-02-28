@@ -1,0 +1,24 @@
+web:
+  host: "0.0.0.0"
+  port: 8765
+  enableCors: true
+
+ui:
+  showClock: true
+  showWeather: true
+  showDayNight: true
+
+render:
+  defaultViewDistanceChunks: 10
+  treatNonOccludingAsAir: true
+  requireChunkLoaded: true
+
+performance:
+  maxCachedChunkMeshesPerWorld: 1024
+  chunkDirtyDebounceMs: 500
+
+textures:
+  mode: "resourcepack"        # "resourcepack" or "fallback"
+  packFile: "texturepacks/default-1.21.11.zip"
+  tileSize: 16                # assumes 16x16 textures (works with most packs)
+  maxTiles: 1024              # caps atlas size; unknown textures fallback to "stone"

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1"/>
+  <title>Voxmap</title>
+  <link rel="stylesheet" href="/static/styles.css"/>
+  <link rel="icon" type="image/png" href="/static/favicon.png"/>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="hud">
+    <div id="topLeft" class="pill">
+      <label>Players</label>
+      <select id="playerSelect">
+        <option value="">Loading…</option>
+      </select>
+    </div>
+
+    <div id="topCenter" class="pill" title="World status">
+      <span id="dayNight">☀️</span>
+      <span id="weather">—</span>
+      <span id="clock">--:--</span>
+    </div>
+
+    <div id="topRight" class="pill">
+      <label>World</label>
+      <select id="worldSelect"></select>
+    </div>
+
+    <div id="bottomCenter" class="pill">
+      Cursor: <span id="cursorPos">X: -, Y: -, Z: -</span>
+    </div>
+
+    <div class="bottomRight">
+      <label class="pillLabel">Markers</label>
+      <select id="markerSelect" class="pillSelect">
+        <option value="">Markers</option>
+      </select>
+    </div>
+
+    <!--div id="hint" class="hint">
+      RMB drag: rotate • LMB drag: pan • Scroll: zoom at cursor • Select player: jump
+    </div-->
+  </div>
+
+  <canvas id="c"></canvas>
+
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>

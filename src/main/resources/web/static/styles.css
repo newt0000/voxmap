@@ -1,0 +1,96 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #0b0b10;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+#c {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+#hud {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+#topLeft {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  display: flex;
+  gap: 10px;
+}
+
+#topRight {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  pointer-events: auto;
+}
+
+#topRight2 {
+  position: absolute;
+  right: 14px;
+  top: 52px;
+  pointer-events: auto;
+}
+
+#bottomCenter {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 14px;
+}
+
+select {
+  background: rgba(20, 20, 26, 0.85);
+  color: rgba(245,245,255,0.95);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  padding: 8px 10px;
+  outline: none;
+}
+
+.pill {
+  background: rgba(20, 20, 26, 0.78);
+  color: rgba(245,245,255,0.95);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 8px 12px;
+  font-size: 14px;
+  min-width: 54px;
+  text-align: center;
+}
+/* Make sure UI can be clicked */
+.hud, .topbar, .pill, .pillSelect, .pillLabel,
+.topLeft, .topRight, .bottomCenter, .bottomRight {
+  pointer-events: auto;
+}
+
+canvas#c {
+  display:block;
+}
+
+/* If you have a fullscreen overlay, it must not block clicks */
+.overlay {
+  pointer-events: none;
+}
+
+.bottomRight{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(15,18,26,0.55);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.10);
+}

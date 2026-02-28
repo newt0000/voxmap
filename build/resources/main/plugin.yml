@@ -1,0 +1,11 @@
+name: Voxmap
+version: 1.0.0
+main: voxmap.Voxmap
+api-version: "1.20"
+commands:
+  voxmap:
+    description: Voxmap commands
+    aliases: [vmap]
+permissions:
+  voxmap.admin:
+    default: op
