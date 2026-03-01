@@ -1,7 +1,7 @@
 name: Voxmap
 version: 1.0.0
 main: voxmap.Voxmap
-api-version: "1.20"
+api-version: "1.21"
 commands:
   voxmap:
     description: Voxmap commands
